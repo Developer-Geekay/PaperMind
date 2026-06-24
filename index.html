@@ -1158,6 +1158,7 @@ el.connectBtn.addEventListener('click',async()=>{
     else if(msg.includes('403')) m='Permission denied. Remove HTTP referrer restrictions from your key in Google Cloud Console.';
     else if(msg.includes('404')) m='Model not found — try a different model.';
     else if(msg.includes('429')) m='Rate limit hit. Wait a moment then try again.';
+    else if(msg.includes('503')) m='This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.';
     else if(msg.includes('NetworkError')||msg.includes('Failed to fetch')) m='Network error — check your internet connection.';
     el.spStatus.className='sp-status fail';
     el.spStatusMsg.textContent=m;
